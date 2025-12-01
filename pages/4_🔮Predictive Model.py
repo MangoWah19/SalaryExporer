@@ -205,13 +205,24 @@ user_input = pd.DataFrame([{
 log_pred = rf_model.predict(user_input)[0]
 salary_pred = np.expm1(log_pred)
 
-# DISPLAY RESULT
+# DISPLAY RESULT (Gradient Highlight Box)
 st.markdown(f"""
-<div style='padding: 25px; border-radius: 12px; background: #eef2ff; border-left: 6px solid #667eea; margin-bottom: 25px;'>
-    <h3 style='margin: 0;'>💰 Predicted Salary:</h3>
-    <p style='font-size: 1.8rem; font-weight: bold; margin: 5px 0 0 0;'>${salary_pred:,.2f}</p>
+<div style="
+    padding: 22px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #667eea20, #764ba220);
+    border-left: 6px solid #667eea;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    margin-bottom: 25px;
+">
+    <h3 style="margin: 0; font-weight: 600;">💰 Predicted Salary</h3>
+    <p style="font-size: 2rem; font-weight: bold; margin-top: 8px;">
+        ${salary_pred:,.2f}
+    </p>
 </div>
 """, unsafe_allow_html=True)
+
+
 
 # ---------------------------------------------------------
 # SALARY DISTRIBUTION COMPARISON

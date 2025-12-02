@@ -33,3 +33,6 @@ This Streamlit application visualises cybersecurity salary patterns using intera
 
 Edited Dataset:  
 salaries_cyber_cleaned.csv
+
+Model Evaluation:
+model_evaluation.ipynb
